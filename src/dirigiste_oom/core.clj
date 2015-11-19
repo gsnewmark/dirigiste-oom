@@ -36,8 +36,8 @@
                                          max-total)
         max-iterations 1000
         default-key "test"]
-    (println "Dispose each object only once")
+    (println (str "Dispose each object only once (" max-iterations " iterations)"))
     (run-checks max-iterations 1 new-pool default-key)
     (println)
-    (println "Dispose each object twice")
+    (println (str "Dispose each object twice (" max-iterations " iterations)"))
     (run-checks max-iterations 2 new-pool default-key)))
